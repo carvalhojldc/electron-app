@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = (userName, password) => {
-    if (password === "admin" && userName === "admin") {
+    if (password === "Admin123!" && userName === "admin") {
       setUser({ userName });
       navigate("/");
     } else {
