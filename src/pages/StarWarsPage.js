@@ -163,6 +163,7 @@ export const StarWarsPage = () => {
   useEffect(() => {
     axios.get("https://swapi.dev/api/films").then((response) => {
       setMovies(response.data);
+      setLoading(false);
     });
   }, []);
 

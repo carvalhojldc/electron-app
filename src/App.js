@@ -6,7 +6,6 @@ import {
   HashRouter,
   Navigate,
 } from "react-router-dom";
-import "./styles.css";
 
 import { LoginPage } from "./pages/LoginPage.js";
 import { HomePage } from "./pages/HomePage";
@@ -26,10 +25,10 @@ const AppRoutes = () => {
 
   return (
     <div>
-      <HashRouter>
+      <Router>
           <AuthProvider>
             <Routes>
-              <Route exact path="login" element={<LoginPage />} />
+              <Route exact path="/login" element={<LoginPage />} />
               <Route
                 exact
                 path="/"
@@ -59,14 +58,14 @@ const AppRoutes = () => {
               />
             </Routes>
           </AuthProvider>
-      </HashRouter>
+      </Router>
     </div>
   );
 };
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <AppRoutes />
     </div>
   );

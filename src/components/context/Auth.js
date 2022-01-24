@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
     if (password === "admin" && userName === "admin") {
       setUser({ userName });
       navigate("/");
+    } else {
+      alert("Invalid login!");
     }
   };
 
